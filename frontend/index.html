@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f2">
+  <meta name="description" content="Find a roommate who fits your student life, budget, and habits.">
+  <title>Roomie — Find your kind of roommate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Roomie home"><span class="brand-mark">r</span> roomie<span class="brand-dot">.</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#discover">Discover</a><a href="#how-it-works">How it works</a><a href="#post">Post a listing</a>
+    </nav>
+    <a class="nav-cta" href="#post">Find your people <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR NEXT CHAPTER STARTS HERE</div>
+        <h1>Good roommates.<br><span>Better memories.</span></h1>
+        <p class="hero-subtitle">Find a place — and people — that feel like your kind of home. Made for student life, real budgets, and new beginnings.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#discover">Explore listings <span>↗</span></a><a class="text-link" href="#how-it-works">How it works <span>→</span></a></div>
+        <div class="hero-note"><div class="avatar-stack"><span>A</span><span>M</span><span>S</span><span>+</span></div><div><strong>Made for student life</strong><small>Find your people, at your pace.</small></div></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a cozy shared student apartment">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="sun-shape"></div><div class="plant plant-left"><i></i><i></i><i></i><b></b></div>
+        <div class="room-card">
+          <div class="room-window"><span></span><span></span><span></span><span></span></div>
+          <div class="room-shelf"><i></i><i></i><i></i></div>
+          <div class="sofa"><div class="sofa-back"></div><div class="cushion"></div><div class="sofa-seat"></div><div class="sofa-arm"></div><div class="sofa-leg"></div></div>
+          <div class="floor-lamp"><i></i><b></b></div><div class="rug"></div>
+          <div class="art-caption"><span class="caption-icon">✳</span><div><strong>Your next home</strong><small>Somewhere you belong.</small></div><span class="caption-arrow">↗</span></div>
+        </div>
+        <div class="floating-tag tag-top"><span>✦</span> Shared spaces, shared stories</div>
+        <div class="floating-tag tag-bottom"><span class="tag-heart">♡</span> Room for your kind of life</div>
+      </div>
+      <div class="hero-bottom"><span>01 / FIND YOUR FIT</span><span>LESS SCROLLING. MORE BELONGING.</span><span>SCROLL TO EXPLORE ↓</span></div>
+    </section>
+
+    <section class="search-section" id="discover">
+      <div class="section-heading">
+        <div><div class="eyebrow">THE GOOD ROOMMATE SEARCH</div><h2>Find a space that <em>fits.</em></h2></div>
+        <p>Search real listings from students and hosts. Your next great chapter could be one click away.</p>
+      </div>
+      <form class="search-panel" id="filter-form">
+        <label class="search-field"><span>📍</span><span class="field-content"><small>LOCATION</small><input id="filter-location" type="search" placeholder="City or campus"></span></label>
+        <label class="search-field"><span>₹</span><span class="field-content"><small>MAX MONTHLY RENT</small><input id="filter-rent" type="number" min="0" step="500" placeholder="Any budget"></span></label>
+        <label class="search-field"><span>⌂</span><span class="field-content"><small>ROOM TYPE</small><select id="filter-room"><option value="">Any room type</option><option value="Private">Private room</option><option value="Shared">Shared room</option><option value="Studio">Studio</option></select></span></label>
+        <button class="button button-dark search-button" type="submit">Search <span>↗</span></button>
+      </form>
+      <div class="listings-toolbar"><div><span class="live-dot"></span><span id="results-count">Loading listings…</span></div><button class="clear-filters" id="clear-filters" type="button">Clear filters ↺</button></div>
+      <div id="status-message" class="status-message" role="status" aria-live="polite"></div>
+      <div class="listing-grid" id="listing-grid"></div>
+      <div class="empty-state" id="empty-state" hidden><div class="empty-icon">⌂</div><h3>No listings found just yet</h3><p>Try adjusting your filters, or be the first to post a place.</p><a class="button button-dark" href="#post">Post a listing ↗</a></div>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <div class="how-intro"><div class="eyebrow">LESS AWKWARD. MORE AWESOME.</div><h2>Roommate hunting,<br><em>reimagined.</em></h2><p>Finding your people shouldn't feel like a full-time job. Keep it simple, honest, and human.</p><a href="#post" class="text-link">Start your search <span>→</span></a></div>
+      <div class="steps">
+        <article class="step-card"><span class="step-number">01</span><div class="step-icon peach">⌕</div><h3>Explore your options</h3><p>Browse student-friendly listings and filter by location, rent, and room type.</p></article>
+        <article class="step-card"><span class="step-number">02</span><div class="step-icon mint">✎</div><h3>Share your space</h3><p>Post a listing with the details that help the right roommate find you.</p></article>
+        <article class="step-card"><span class="step-number">03</span><div class="step-icon lilac">♡</div><h3>Make it yours</h3><p>Reach out to a listing owner, ask questions, and arrange a safe viewing.</p></article>
+      </div>
+    </section>
+
+    <section class="post-section" id="post">
+      <div class="post-copy"><div class="eyebrow"><span class="eyebrow-dot"></span> HAVE A ROOM TO SHARE?</div><h2>Your place could be<br>someone’s <em>happy place.</em></h2><p>Tell students a little about your space. Add the essentials, set a fair monthly rent, and help someone feel at home.</p><div class="post-trust"><span>✦</span> Be clear. Be kind. Meet safely.</div></div>
+      <form class="listing-form" id="listing-form">
+        <div class="form-heading"><div><span class="form-kicker">LISTING DETAILS</span><h3>Put your place out there</h3></div><span class="form-spark">✳</span></div>
+        <div class="form-row"><label>Listing title<input name="title" required minlength="5" maxlength="100" placeholder="e.g. Sunny room near campus"></label><label>City / campus<input name="location" required minlength="2" maxlength="100" placeholder="e.g. Hyderabad"></label></div>
+        <div class="form-row"><label>Monthly rent (₹)<input name="rent" type="number" required min="1" max="10000000" step="1" placeholder="e.g. 8000"></label><label>Room type<select name="room_type" required><option value="">Choose one</option><option>Private</option><option>Shared</option><option>Studio</option></select></label></div>
+        <label>About the place<textarea name="description" required minlength="20" maxlength="1500" rows="3" placeholder="What should a potential roommate know? Include amenities, house rules, and move-in details."></textarea></label>
+        <div class="form-row"><label>Your name<input name="contact_name" required minlength="2" maxlength="80" placeholder="First name or preferred name"></label><label>Contact email<input name="contact_email" type="email" required maxlength="254" placeholder="you@example.com"></label></div>
+        <button class="button button-dark submit-button" type="submit"><span class="submit-label">Publish my listing</span><span>↗</span></button>
+        <p class="form-footnote">Your listing is stored in the connected database. Avoid posting sensitive personal information.</p>
+        <div class="form-feedback" id="form-feedback" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+    <section class="safety-strip"><span class="safety-icon">✦</span><div><strong>A little reminder from us</strong><p>Meet in public first, verify details, and never send money before confirming a place. Your safety comes first.</p></div><a href="#post">Find your fit <span>→</span></a></section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="#"><span class="brand-mark">r</span> roomie<span class="brand-dot">.</span></a><span>Made for the places we grow into.</span><span>© <span id="year"></span> Roomie. Student project.</span></footer>
+  <template id="listing-template">
+    <article class="listing-card">
+      <div class="listing-visual"><span class="room-badge"></span><span class="listing-spark">✳</span><div class="visual-house"><div class="house-window"></div><div class="house-door"></div></div></div>
+      <div class="listing-body"><div class="listing-location"></div><h3 class="listing-title"></h3><p class="listing-description"></p><div class="listing-meta"><span class="room-type"></span><strong class="listing-rent"></strong></div><div class="listing-actions"><button class="contact-button" type="button">Contact owner ↗</button><button class="edit-button" type="button" hidden>Edit</button><button class="delete-button" type="button" hidden aria-label="Delete listing">Delete</button></div></div>
+    </article>
+  </template>
+  <script src="script.js" defer></script>
+</body>
+</html>
